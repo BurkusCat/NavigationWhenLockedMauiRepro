@@ -30,7 +30,12 @@
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
 		<ApplicationVersion>1</ApplicationVersion>
 
-    <MauiVersion>8.0.7</MauiVersion>
+		<!-- Uncomment to use MAUI nightlies https://github.com/dotnet/maui/wiki/Nightly-Builds -->
+		<RestoreAdditionalProjectSources>
+				https://pkgs.dev.azure.com/xamarin/public/_packaging/maui-nightly/nuget/v3/index.json
+		</RestoreAdditionalProjectSources>
+
+		<MauiVersion>8.0.20-nightly.10298</MauiVersion>
 
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">11.0</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">13.1</SupportedOSPlatformVersion>
